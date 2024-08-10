@@ -30,6 +30,7 @@ struct TimerSlider: View {
         let vector = CGVector(dx: location.x, dy: -location.y)
         let angleRadians = atan2(vector.dx, vector.dy)
         let positiveAngle = angleRadians < 0.0 ? angleRadians + (2.0 * .pi) : angleRadians
+        progress = positiveAngle / (2.0 * .pi) * maxValue
         progress = ((positiveAngle / (2.0 * .pi)) * (maxValue - minValue)) + minValue
         rotationAngle = Angle(radians: positiveAngle)
     }
@@ -46,14 +47,14 @@ struct TimerSlider: View {
                     Circle()
                         .stroke(Color(hue: 0, saturation: 0, brightness: 0.85), lineWidth: sliderWidth)
                     Circle()
-                        .trim(from: 0, to: progress)
+                        .trim(from: 0, to: progressFraction)
                         .stroke(Color(.blue), style: StrokeStyle(lineWidth: sliderWidth, lineCap: .round)
                             )
                         .rotationEffect(Angle(degrees: -90))
                     Circle()
-                        .fill(Color.black)
+                        .fill(Color.white)
                         .frame(width: sliderWidth, height: sliderWidth)
-                        .offset(y: -radius / 2.0)
+                        .offset(y: -radius)
                         .rotationEffect(rotationAngle)
                         .gesture(
                             DragGesture(minimumDistance: 0.0)
@@ -63,7 +64,7 @@ struct TimerSlider: View {
                         )
                     }
                 .frame(width: radius * 2.0, height: radius * 2.0, alignment: .center)
-                .padding()
+                .padding(radius * 0.11)
             }
             
             .onAppear {
@@ -71,7 +72,7 @@ struct TimerSlider: View {
             }
 
         }
-        
+        .padding()
         }
     }
 

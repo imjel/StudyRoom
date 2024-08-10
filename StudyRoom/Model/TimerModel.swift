@@ -13,17 +13,16 @@ extension TimerView {
         @Published var isActive = false
         @Published var time: String = "10:00"
         @Published var showingAlert = false
-        @Published var minutes: Float = 10.0 {         // user selected minutes
+        @Published var minutes: Double = 10.0 {         // user selected minutes
             didSet {
                 self.time = "\(Int(minutes)):00"
             }
         }
-        @Published var progress: Double = 0.0
-        private var startTime = 0
+        @Published var startTime = 0
         private var endDate = Date()
         
         // starts the timer
-        func start(minutes: Float) {
+        func start(minutes: Double) {
             self.startTime = Int(minutes)
             self.endDate = Date()
             self.isActive = true
@@ -32,7 +31,7 @@ extension TimerView {
         
         // reset timer
         func reset() {
-            self.minutes = Float(startTime)
+            self.minutes = Double(startTime)
             self.isActive = false
             self.time = "\(Int(minutes)):00"
         }
@@ -55,7 +54,7 @@ extension TimerView {
             let minutes = calendar.component(.minute, from: date)
             let seconds = calendar.component(.second, from: date)
             
-            self.minutes = Float(minutes) // keep track of remaining minutes
+            self.minutes = Double(minutes) // keep track of remaining minutes
             self.time = String(format: "%d:%02d", minutes, seconds) // formatting minutes and seconds to 2 decimal points
         }
     }

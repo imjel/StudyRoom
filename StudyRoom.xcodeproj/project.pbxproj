@@ -10,8 +10,6 @@
 		5030038C2C448C6600198578 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030038B2C448C6600198578 /* Menu.swift */; };
 		5047E4F22C6583B00060EA47 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F12C6583B00060EA47 /* TimerView.swift */; };
 		5047E4F42C658ADB0060EA47 /* TimerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F32C658ADB0060EA47 /* TimerSlider.swift */; };
-		5047E4F62C658C7F0060EA47 /* TimerSlider2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F52C658C7F0060EA47 /* TimerSlider2.swift */; };
-		5047E4F82C65A6510060EA47 /* CircularSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F72C65A6510060EA47 /* CircularSliderView.swift */; };
 		504BF9EE2C43403100BCE9C7 /* StudyRoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BF9ED2C43403100BCE9C7 /* StudyRoomApp.swift */; };
 		504BF9F02C43403100BCE9C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BF9EF2C43403100BCE9C7 /* ContentView.swift */; };
 		504BF9F22C43403300BCE9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504BF9F12C43403300BCE9C7 /* Assets.xcassets */; };
@@ -58,8 +56,6 @@
 		5030038B2C448C6600198578 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		5047E4F12C6583B00060EA47 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5047E4F32C658ADB0060EA47 /* TimerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSlider.swift; sourceTree = "<group>"; };
-		5047E4F52C658C7F0060EA47 /* TimerSlider2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSlider2.swift; sourceTree = "<group>"; };
-		5047E4F72C65A6510060EA47 /* CircularSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderView.swift; sourceTree = "<group>"; };
 		504BF9EA2C43403100BCE9C7 /* StudyRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504BF9ED2C43403100BCE9C7 /* StudyRoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomApp.swift; sourceTree = "<group>"; };
 		504BF9EF2C43403100BCE9C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,8 +114,6 @@
 			children = (
 				5047E4F12C6583B00060EA47 /* TimerView.swift */,
 				5047E4F32C658ADB0060EA47 /* TimerSlider.swift */,
-				5047E4F72C65A6510060EA47 /* CircularSliderView.swift */,
-				5047E4F52C658C7F0060EA47 /* TimerSlider2.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -369,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5047E4F82C65A6510060EA47 /* CircularSliderView.swift in Sources */,
 				504BFA1F2C434A1C00BCE9C7 /* Task.swift in Sources */,
 				50604CD62C52E2350070B73D /* TaskProgress.swift in Sources */,
 				504BFA212C434A3700BCE9C7 /* Profile.swift in Sources */,
@@ -386,7 +379,6 @@
 				50AC31592C6410A300AB279C /* TaskProgressLog.swift in Sources */,
 				504BFA1A2C4341EC00BCE9C7 /* NotificationTest.swift in Sources */,
 				504BFA2D2C434B1000BCE9C7 /* TaskList.swift in Sources */,
-				5047E4F62C658C7F0060EA47 /* TimerSlider2.swift in Sources */,
 				5047E4F42C658ADB0060EA47 /* TimerSlider.swift in Sources */,
 				504BFA2B2C434B0B00BCE9C7 /* TaskRow.swift in Sources */,
 				504BFA282C434A9C00BCE9C7 /* ProfileSummary.swift in Sources */,
