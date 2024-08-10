@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct TaskDetail: View {
-    
-    @State private var toggleLog = false
-    @State private var toggleTimer = false
+
     @Environment(ModelData.self) var modelData
     @Binding var task: Task
     
@@ -54,43 +52,8 @@ struct TaskDetail: View {
                     Text("minutes to go!")
                 }
             }
-            
         }
-        
-        Divider()
-        
-        // menu buttons
-        VStack {
             
-            // log progress button
-            Button {
-                toggleLog.toggle()
-            } label: {
-                Text("Log Progress")
-                    .frame(width: WIDTH, height: 56)
-            }
-            .buttonStyle(.bordered)
-            .buttonBorderShape(.roundedRectangle(radius: 15))
-            .tint(task.color)
-            
-            // set timer transition button
-            Button {
-                toggleTimer.toggle()
-            } label: {
-                Text("Set Timer")
-                    .frame(width: WIDTH, height: 56)
-            }
-            .buttonStyle(.bordered)
-            .buttonBorderShape(.roundedRectangle(radius: 15))
-            .tint(task.color)
-        }
-            .padding()
-        
-            .navigationTitle(task.name)
-            .navigationBarTitleDisplayMode(.inline)
-            .sheet(isPresented: $toggleLog) {
-                TaskProgressLog(task: $task)
-            }
     }
 }
 

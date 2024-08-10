@@ -8,17 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Task {
-    
-//    var name: String
-//    var elapsedTime: Double
-//    var goalTime: Double
-//    var isFinished: Bool
-//    var isDaily: Bool
-//    var icon = Icon.pencil
-//    var notifications: Bool
-//    var color: Color
-    
+struct Task: Identifiable {
+    var id: Int
     var name: String
     var elapsedTime = 0.0
     var goalTime = 10.0
@@ -28,7 +19,7 @@ struct Task {
     var notifications = false
     var color = Color(.blue)
     
-    static let `default` = Task(name: "study")
+    static let `default` = Task(id: 0, name: "study")
     
     
     enum Icon: String, CaseIterable, Identifiable {
@@ -44,8 +35,13 @@ struct Task {
     
     mutating func checkFinished() {
         if elapsedTime >= goalTime {
-            self.isFinished = true;
+            self.isFinished = true
         }
+    }
+    
+    mutating func doFinished() {
+        self.elapsedTime = goalTime
+        self.isFinished = true
     }
     
 }

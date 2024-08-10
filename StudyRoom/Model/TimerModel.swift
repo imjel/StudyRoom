@@ -44,7 +44,7 @@ extension TimerView {
             // when the timer has counted all the way down
             if diff <= 0 {
                 self.isActive = false
-                self.time = "0.00"
+                self.time = String(format: "%d:%02d", 0.00)
                 self.showingAlert = true
                 return
             }

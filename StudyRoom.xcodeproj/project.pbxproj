@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502FBFE02C6C1EA900739EC1 /* TaskHost2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FBFDF2C6C1EA900739EC1 /* TaskHost2.swift */; };
 		5030038C2C448C6600198578 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030038B2C448C6600198578 /* Menu.swift */; };
 		5047E4F22C6583B00060EA47 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F12C6583B00060EA47 /* TimerView.swift */; };
 		5047E4F42C658ADB0060EA47 /* TimerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F32C658ADB0060EA47 /* TimerSlider.swift */; };
@@ -31,6 +32,7 @@
 		504BFA332C43511300BCE9C7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA322C43511300BCE9C7 /* ModelData.swift */; };
 		50604CD62C52E2350070B73D /* TaskProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50604CD52C52E2350070B73D /* TaskProgress.swift */; };
 		50AC31592C6410A300AB279C /* TaskProgressLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC31582C6410A300AB279C /* TaskProgressLog.swift */; };
+		50BE7A1C2C6C644700039837 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE7A1B2C6C644700039837 /* CheckBox.swift */; };
 		50E9B79E2C62C78C0004F7AB /* TaskHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B79D2C62C78C0004F7AB /* TaskHost.swift */; };
 		50E9B7A02C62C86C0004F7AB /* TaskEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B79F2C62C86C0004F7AB /* TaskEditor.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		502FBFDF2C6C1EA900739EC1 /* TaskHost2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHost2.swift; sourceTree = "<group>"; };
 		5030038B2C448C6600198578 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		5047E4F12C6583B00060EA47 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5047E4F32C658ADB0060EA47 /* TimerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSlider.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		504BFA322C43511300BCE9C7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		50604CD52C52E2350070B73D /* TaskProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProgress.swift; sourceTree = "<group>"; };
 		50AC31582C6410A300AB279C /* TaskProgressLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProgressLog.swift; sourceTree = "<group>"; };
+		50BE7A1B2C6C644700039837 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		50E9B79D2C62C78C0004F7AB /* TaskHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHost.swift; sourceTree = "<group>"; };
 		50E9B79F2C62C86C0004F7AB /* TaskEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,10 +226,12 @@
 			isa = PBXGroup;
 			children = (
 				504BFA2A2C434B0B00BCE9C7 /* TaskRow.swift */,
+				50BE7A1B2C6C644700039837 /* CheckBox.swift */,
 				50604CD52C52E2350070B73D /* TaskProgress.swift */,
 				504BFA2C2C434B1000BCE9C7 /* TaskList.swift */,
 				504BFA2E2C434B1500BCE9C7 /* TaskDetail.swift */,
 				50E9B79D2C62C78C0004F7AB /* TaskHost.swift */,
+				502FBFDF2C6C1EA900739EC1 /* TaskHost2.swift */,
 				50E9B79F2C62C86C0004F7AB /* TaskEditor.swift */,
 				50AC31582C6410A300AB279C /* TaskProgressLog.swift */,
 			);
@@ -370,7 +376,9 @@
 				50E9B7A02C62C86C0004F7AB /* TaskEditor.swift in Sources */,
 				504BFA262C434A7200BCE9C7 /* ProfileHost.swift in Sources */,
 				504BFA332C43511300BCE9C7 /* ModelData.swift in Sources */,
+				502FBFE02C6C1EA900739EC1 /* TaskHost2.swift in Sources */,
 				504BFA312C434B4400BCE9C7 /* TimerModel.swift in Sources */,
+				50BE7A1C2C6C644700039837 /* CheckBox.swift in Sources */,
 				504BFA242C434A6B00BCE9C7 /* ProfileEditor.swift in Sources */,
 				5047E4F22C6583B00060EA47 /* TimerView.swift in Sources */,
 				504BF9F02C43403100BCE9C7 /* ContentView.swift in Sources */,

@@ -23,7 +23,11 @@ struct TimerView: View {
                 .padding()
                 .frame(width: width)
                 .alert("Done!", isPresented: $tm.showingAlert) {
+<<<<<<< HEAD
                     Button("Complete", role: .cancel) {
+=======
+                    Button("Close", role: .cancel) {
+>>>>>>> 51faa3a (timer updates)
                         // functionality to cancel
                     }
             }

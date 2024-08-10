@@ -12,5 +12,6 @@ import SwiftUI
 class ModelData {
     var profile = Profile.default
     var task = Task.default
+    var tasks: [Task] = [Task.default]
 
 }

@@ -27,8 +27,9 @@ struct TaskEditor: View {
                     Text(photo.rawValue).tag(photo)
                 }
             }
-            HStack{
+            HStack {
                 Text("Color")
+                Spacer()
                 ColorPicker(selection: $task.color, supportsOpacity: false){
                 }
             }
