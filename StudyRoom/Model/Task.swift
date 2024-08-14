@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct Task: Identifiable {
-    var id: Int
+    
+    let id = UUID()
     var name: String
     var elapsedTime = 0.0
     var goalTime = 10.0
@@ -19,7 +20,7 @@ struct Task: Identifiable {
     var notifications = false
     var color = Color(.blue)
     
-    static let `default` = Task(id: 0, name: "study")
+    static let `default` = Task(name: "study")
     
     
     enum Icon: String, CaseIterable, Identifiable {

@@ -20,20 +20,30 @@ struct TaskProgress: View {
                 // background color for bar
                 RoundedRectangle(cornerRadius: 15)
                     .frame(width: WIDTH, height: 70)
-                    .foregroundColor(Color.gray.opacity(0.4))
+                    .foregroundColor(Color.gray.opacity(0.5))
                 // foreground color indicating progress
                 RoundedRectangle(cornerRadius: 15)
                     .frame(width:CGFloat(progress) * WIDTH, height: 70)
                     .foregroundColor(color.opacity(0.6))
                 
                 // task label with percentage
-                VStack {
-                    Text(label)
-                    Text(String(format: "%.0f%%", progress * 100))
-                        .bold()
+                if progress <= 0.1 {
+                    VStack {
+                        Text(label)
+                        Text(String(format: "%.0f%%", progress * 100))
+                            .bold()
+                    }
+                    .frame(width: WIDTH)
+                    .foregroundColor(Color.white)
+                } else {
+                    VStack {
+                        Text(label)
+                        Text(String(format: "%.0f%%", progress * 100))
+                            .bold()
+                    }
+                    .frame(width: CGFloat(progress) * WIDTH)
+                    .foregroundColor(Color.white)
                 }
-                .frame(width: CGFloat(progress) * WIDTH)
-                .foregroundColor(Color.white)
             }
             .padding()
         }

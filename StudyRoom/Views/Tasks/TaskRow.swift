@@ -14,17 +14,18 @@ struct TaskRow: View {
         guard task.goalTime > 0 else { return 0.0 } // if elapsedTime = 0
         return min(Double(task.elapsedTime) / Double(task.goalTime), 1.0) // get progress as percentage
     }
-    @State var isFinished: Bool = false
     
     var body: some View {
         
         VStack {
             HStack (alignment: .center) {
                 
-                Toggle(isOn: $isFinished) {
-                    
+                if task.isFinished {
+                    CheckBox(isOn: true)
+                } else {
+                    CheckBox(isOn: false)
                 }
-                .toggleStyle(CheckBox())
+                
                 TaskProgress(progress: progress, label: task.name, color: task.color)
 
             }

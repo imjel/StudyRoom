@@ -28,7 +28,7 @@ struct TaskList: View {
 
                 ForEach(filteredTasks) { task in
                     NavigationLink {
-                        TaskHost2()
+                        TaskHost()
                     } label: {
                         TaskRow(task: modelData.task)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .init(horizontal: .leading, vertical: .center))
