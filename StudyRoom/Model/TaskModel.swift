@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Task: Identifiable {
+struct TaskModel: Identifiable {
     
     let id = UUID()
     var name: String
@@ -20,7 +20,7 @@ struct Task: Identifiable {
     var notifications = false
     var color = Color(.blue)
     
-    static let `default` = Task(name: "study")
+    static let `default` = TaskModel(name: "study")
     
     
     enum Icon: String, CaseIterable, Identifiable {
