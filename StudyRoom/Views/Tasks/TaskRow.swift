@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskRow: View {
 
-    var task: Task
+    var task: TaskModel
     var progress: Double {
         guard task.goalTime > 0 else { return 0.0 } // if elapsedTime = 0
         return min(Double(task.elapsedTime) / Double(task.goalTime), 1.0) // get progress as percentage
@@ -20,12 +20,9 @@ struct TaskRow: View {
         VStack {
             HStack (alignment: .center) {
                 
-                if task.isFinished {
-                    CheckBox(isOn: true)
-                } else {
-                    CheckBox(isOn: false)
-                }
-                
+                Image(systemName: task.isFinished ? "checkmark.square" : "square")
+                    .foregroundColor(.gray)
+                    .font(.system(size: 25))
                 TaskProgress(progress: progress, label: task.name, color: task.color)
 
             }
@@ -35,5 +32,13 @@ struct TaskRow: View {
 }
 
 #Preview {
-    TaskRow(task: Task.default)
+    
+    var item1 = TaskModel(name: "First task", isFinished: false)
+    var item2 = TaskModel(name: "Second task", isFinished: true)
+
+           Group {
+               TaskRow(task: item1)
+               TaskRow(task: item2)
+           }
+           
 }

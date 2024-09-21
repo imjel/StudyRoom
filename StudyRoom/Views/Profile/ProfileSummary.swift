@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ProfileSummary: View {
-    @Environment(ModelData.self) var modelData
-    var profile: Profile
+    @EnvironmentObject var modelData: ModelData
+    var profile: ProfileModel
     
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
@@ -27,7 +27,7 @@ struct ProfileSummary: View {
         Divider()
         VStack(alignment: .leading, spacing: 20){
             HStack {
-                Text("Notification Preference: \(profile.prefersNotifications ? "On" : "Off")")
+                Text("Notification Preference: \(profile.notifications ? "On" : "Off")")
                     .multilineTextAlignment(.trailing)
             }
             Text("Birthday: \(profile.birthday, style: .date)")
@@ -37,6 +37,6 @@ struct ProfileSummary: View {
 }
 
 #Preview {
-    ProfileSummary(profile: Profile.default)
-        .environment(ModelData())
+    ProfileSummary(profile: ProfileModel.default)
+        .environmentObject(ModelData())
 }

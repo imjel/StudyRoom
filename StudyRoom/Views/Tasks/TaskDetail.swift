@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TaskDetail: View {
 
-    @Environment(ModelData.self) var modelData
-    @Binding var task: Task
+    @EnvironmentObject var modelData: ModelData
+    @Binding var task: TaskModel
     
     private let WIDTH: CGFloat = 280
     
@@ -58,6 +58,6 @@ struct TaskDetail: View {
 }
 
 #Preview {
-    TaskDetail(task: .constant(Task.default))
-        .environment(ModelData())
+    TaskDetail(task: .constant(TaskModel.default))
+        .environmentObject(ModelData())
 }

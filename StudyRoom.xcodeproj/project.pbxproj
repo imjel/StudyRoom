@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5029A9CE2C73FA6F008091B0 /* TaskAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029A9CD2C73FA6F008091B0 /* TaskAdder.swift */; };
 		502FBFE02C6C1EA900739EC1 /* TaskHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FBFDF2C6C1EA900739EC1 /* TaskHost.swift */; };
-		5030038C2C448C6600198578 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030038B2C448C6600198578 /* Menu.swift */; };
+		50388A9C2C806A9C0066A6DE /* EmptyTaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50388A9B2C806A9C0066A6DE /* EmptyTaskList.swift */; };
 		5047E4F22C6583B00060EA47 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F12C6583B00060EA47 /* TimerView.swift */; };
 		5047E4F42C658ADB0060EA47 /* TimerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5047E4F32C658ADB0060EA47 /* TimerSlider.swift */; };
 		504BF9EE2C43403100BCE9C7 /* StudyRoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BF9ED2C43403100BCE9C7 /* StudyRoomApp.swift */; };
@@ -20,8 +21,8 @@
 		504BFA0B2C43403300BCE9C7 /* StudyRoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA0A2C43403300BCE9C7 /* StudyRoomUITestsLaunchTests.swift */; };
 		504BFA1A2C4341EC00BCE9C7 /* NotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA192C4341EC00BCE9C7 /* NotificationTest.swift */; };
 		504BFA1D2C4342BF00BCE9C7 /* sample-push-notification.apns in Resources */ = {isa = PBXBuildFile; fileRef = 504BFA1C2C4342BF00BCE9C7 /* sample-push-notification.apns */; };
-		504BFA1F2C434A1C00BCE9C7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA1E2C434A1C00BCE9C7 /* Task.swift */; };
-		504BFA212C434A3700BCE9C7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA202C434A3700BCE9C7 /* Profile.swift */; };
+		504BFA1F2C434A1C00BCE9C7 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA1E2C434A1C00BCE9C7 /* TaskModel.swift */; };
+		504BFA212C434A3700BCE9C7 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA202C434A3700BCE9C7 /* ProfileModel.swift */; };
 		504BFA242C434A6B00BCE9C7 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA232C434A6B00BCE9C7 /* ProfileEditor.swift */; };
 		504BFA262C434A7200BCE9C7 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA252C434A7200BCE9C7 /* ProfileHost.swift */; };
 		504BFA282C434A9C00BCE9C7 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA272C434A9C00BCE9C7 /* ProfileSummary.swift */; };
@@ -31,13 +32,8 @@
 		504BFA312C434B4400BCE9C7 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA302C434B4400BCE9C7 /* TimerModel.swift */; };
 		504BFA332C43511300BCE9C7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504BFA322C43511300BCE9C7 /* ModelData.swift */; };
 		50604CD62C52E2350070B73D /* TaskProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50604CD52C52E2350070B73D /* TaskProgress.swift */; };
-		506427F52C6D5BF900B9658A /* StudyRoomModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 506427F32C6D5BF900B9658A /* StudyRoomModel.xcdatamodeld */; };
-		506427F72C6D5DAB00B9658A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506427F62C6D5DAB00B9658A /* CoreDataManager.swift */; };
-		506427FC2C6D5E5000B9658A /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506427F82C6D5E5000B9658A /* Profile+CoreDataClass.swift */; };
-		506427FD2C6D5E5000B9658A /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506427F92C6D5E5000B9658A /* Profile+CoreDataProperties.swift */; };
-		506427FE2C6D5E5000B9658A /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506427FA2C6D5E5000B9658A /* Task+CoreDataClass.swift */; };
-		506427FF2C6D5E5000B9658A /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506427FB2C6D5E5000B9658A /* Task+CoreDataProperties.swift */; };
 		50AC31592C6410A300AB279C /* TaskProgressLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC31582C6410A300AB279C /* TaskProgressLog.swift */; };
+		50BA13152C73EA0C00A4C9EF /* CodableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BA13142C73EA0C00A4C9EF /* CodableColor.swift */; };
 		50BE7A1C2C6C644700039837 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE7A1B2C6C644700039837 /* CheckBox.swift */; };
 		50E9B7A02C62C86C0004F7AB /* TaskEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9B79F2C62C86C0004F7AB /* TaskEditor.swift */; };
 /* End PBXBuildFile section */
@@ -60,8 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5029A9CD2C73FA6F008091B0 /* TaskAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAdder.swift; sourceTree = "<group>"; };
 		502FBFDF2C6C1EA900739EC1 /* TaskHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHost.swift; sourceTree = "<group>"; };
-		5030038B2C448C6600198578 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		50388A9B2C806A9C0066A6DE /* EmptyTaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTaskList.swift; sourceTree = "<group>"; };
 		5047E4F12C6583B00060EA47 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5047E4F32C658ADB0060EA47 /* TimerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSlider.swift; sourceTree = "<group>"; };
 		504BF9EA2C43403100BCE9C7 /* StudyRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,8 +73,8 @@
 		504BFA0A2C43403300BCE9C7 /* StudyRoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		504BFA192C4341EC00BCE9C7 /* NotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTest.swift; sourceTree = "<group>"; };
 		504BFA1C2C4342BF00BCE9C7 /* sample-push-notification.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = "sample-push-notification.apns"; sourceTree = "<group>"; };
-		504BFA1E2C434A1C00BCE9C7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		504BFA202C434A3700BCE9C7 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		504BFA1E2C434A1C00BCE9C7 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		504BFA202C434A3700BCE9C7 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		504BFA232C434A6B00BCE9C7 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		504BFA252C434A7200BCE9C7 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		504BFA272C434A9C00BCE9C7 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
@@ -87,13 +84,8 @@
 		504BFA302C434B4400BCE9C7 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		504BFA322C43511300BCE9C7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		50604CD52C52E2350070B73D /* TaskProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProgress.swift; sourceTree = "<group>"; };
-		506427F42C6D5BF900B9658A /* StudyRoomModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyRoomModel.xcdatamodel; sourceTree = "<group>"; };
-		506427F62C6D5DAB00B9658A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		506427F82C6D5E5000B9658A /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Profile+CoreDataClass.swift"; path = "StudyRoom/Model/Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
-		506427F92C6D5E5000B9658A /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Profile+CoreDataProperties.swift"; path = "StudyRoom/Model/Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		506427FA2C6D5E5000B9658A /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "StudyRoom/Model/Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		506427FB2C6D5E5000B9658A /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "StudyRoom/Model/Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		50AC31582C6410A300AB279C /* TaskProgressLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProgressLog.swift; sourceTree = "<group>"; };
+		50BA13142C73EA0C00A4C9EF /* CodableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableColor.swift; sourceTree = "<group>"; };
 		50BE7A1B2C6C644700039837 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		50E9B79F2C62C86C0004F7AB /* TaskEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,10 +127,6 @@
 		504BF9E12C43403100BCE9C7 = {
 			isa = PBXGroup;
 			children = (
-				506427F82C6D5E5000B9658A /* Profile+CoreDataClass.swift */,
-				506427F92C6D5E5000B9658A /* Profile+CoreDataProperties.swift */,
-				506427FA2C6D5E5000B9658A /* Task+CoreDataClass.swift */,
-				506427FB2C6D5E5000B9658A /* Task+CoreDataProperties.swift */,
 				504BF9EC2C43403100BCE9C7 /* StudyRoom */,
 				504BF9FD2C43403300BCE9C7 /* StudyRoomTests */,
 				504BFA072C43403300BCE9C7 /* StudyRoomUITests */,
@@ -203,7 +191,6 @@
 				504BFA222C434A5E00BCE9C7 /* Profile */,
 				504BF9EF2C43403100BCE9C7 /* ContentView.swift */,
 				504BFA192C4341EC00BCE9C7 /* NotificationTest.swift */,
-				5030038B2C448C6600198578 /* Menu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,12 +198,10 @@
 		504BFA182C43405400BCE9C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				504BFA1E2C434A1C00BCE9C7 /* Task.swift */,
+				504BFA1E2C434A1C00BCE9C7 /* TaskModel.swift */,
 				504BFA302C434B4400BCE9C7 /* TimerModel.swift */,
-				504BFA202C434A3700BCE9C7 /* Profile.swift */,
+				504BFA202C434A3700BCE9C7 /* ProfileModel.swift */,
 				504BFA322C43511300BCE9C7 /* ModelData.swift */,
-				506427F32C6D5BF900B9658A /* StudyRoomModel.xcdatamodeld */,
-				506427F62C6D5DAB00B9658A /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,10 +230,12 @@
 				504BFA2A2C434B0B00BCE9C7 /* TaskRow.swift */,
 				50604CD52C52E2350070B73D /* TaskProgress.swift */,
 				504BFA2C2C434B1000BCE9C7 /* TaskList.swift */,
+				50388A9B2C806A9C0066A6DE /* EmptyTaskList.swift */,
 				504BFA2E2C434B1500BCE9C7 /* TaskDetail.swift */,
 				502FBFDF2C6C1EA900739EC1 /* TaskHost.swift */,
 				50E9B79F2C62C86C0004F7AB /* TaskEditor.swift */,
 				50AC31582C6410A300AB279C /* TaskProgressLog.swift */,
+				5029A9CD2C73FA6F008091B0 /* TaskAdder.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -257,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				50BE7A1B2C6C644700039837 /* CheckBox.swift */,
+				50BA13142C73EA0C00A4C9EF /* CodableColor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -408,30 +396,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				504BFA1F2C434A1C00BCE9C7 /* Task.swift in Sources */,
+				504BFA1F2C434A1C00BCE9C7 /* TaskModel.swift in Sources */,
 				50604CD62C52E2350070B73D /* TaskProgress.swift in Sources */,
-				504BFA212C434A3700BCE9C7 /* Profile.swift in Sources */,
-				5030038C2C448C6600198578 /* Menu.swift in Sources */,
+				50BA13152C73EA0C00A4C9EF /* CodableColor.swift in Sources */,
+				504BFA212C434A3700BCE9C7 /* ProfileModel.swift in Sources */,
 				50E9B7A02C62C86C0004F7AB /* TaskEditor.swift in Sources */,
 				504BFA262C434A7200BCE9C7 /* ProfileHost.swift in Sources */,
-				506427F72C6D5DAB00B9658A /* CoreDataManager.swift in Sources */,
 				504BFA332C43511300BCE9C7 /* ModelData.swift in Sources */,
 				502FBFE02C6C1EA900739EC1 /* TaskHost.swift in Sources */,
-				506427FC2C6D5E5000B9658A /* Profile+CoreDataClass.swift in Sources */,
-				506427FD2C6D5E5000B9658A /* Profile+CoreDataProperties.swift in Sources */,
-				506427FE2C6D5E5000B9658A /* Task+CoreDataClass.swift in Sources */,
-				506427FF2C6D5E5000B9658A /* Task+CoreDataProperties.swift in Sources */,
 				504BFA312C434B4400BCE9C7 /* TimerModel.swift in Sources */,
-				506427F52C6D5BF900B9658A /* StudyRoomModel.xcdatamodeld in Sources */,
 				50BE7A1C2C6C644700039837 /* CheckBox.swift in Sources */,
 				504BFA242C434A6B00BCE9C7 /* ProfileEditor.swift in Sources */,
 				5047E4F22C6583B00060EA47 /* TimerView.swift in Sources */,
 				504BF9F02C43403100BCE9C7 /* ContentView.swift in Sources */,
 				504BFA2F2C434B1500BCE9C7 /* TaskDetail.swift in Sources */,
+				5029A9CE2C73FA6F008091B0 /* TaskAdder.swift in Sources */,
 				50AC31592C6410A300AB279C /* TaskProgressLog.swift in Sources */,
 				504BFA1A2C4341EC00BCE9C7 /* NotificationTest.swift in Sources */,
 				504BFA2D2C434B1000BCE9C7 /* TaskList.swift in Sources */,
 				5047E4F42C658ADB0060EA47 /* TimerSlider.swift in Sources */,
+				50388A9C2C806A9C0066A6DE /* EmptyTaskList.swift in Sources */,
 				504BFA2B2C434B0B00BCE9C7 /* TaskRow.swift in Sources */,
 				504BFA282C434A9C00BCE9C7 /* ProfileSummary.swift in Sources */,
 				504BF9EE2C43403100BCE9C7 /* StudyRoomApp.swift in Sources */,
@@ -764,20 +748,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		506427F32C6D5BF900B9658A /* StudyRoomModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				506427F42C6D5BF900B9658A /* StudyRoomModel.xcdatamodel */,
-			);
-			currentVersion = 506427F42C6D5BF900B9658A /* StudyRoomModel.xcdatamodel */;
-			name = StudyRoomModel.xcdatamodeld;
-			path = StudyRoom/StudyRoomModel.xcdatamodeld;
-			sourceTree = SOURCE_ROOT;
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 504BF9E22C43403100BCE9C7 /* Project object */;
 }
