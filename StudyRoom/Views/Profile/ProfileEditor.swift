@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileEditor: View {
-    @Binding var profile: Profile
+    @Binding var profile: ProfileModel
     
     var dateRange: ClosedRange<Date> {
         let min = Calendar.current.date(byAdding: .year, value: -100, to: profile.birthday)!
@@ -28,7 +28,7 @@ struct ProfileEditor: View {
             }
             
             Picker("Profile Picture", selection: $profile.photo) {
-                ForEach(Profile.Photo.allCases) { photo in
+                ForEach(ProfileModel.Photo.allCases) { photo in
                     Text(photo.rawValue).tag(photo)
                 }
             }
@@ -37,7 +37,7 @@ struct ProfileEditor: View {
             Text("Birthday")
             }
             
-            Toggle(isOn: $profile.prefersNotifications) {
+            Toggle(isOn: $profile.notifications) {
                 Text("Enable Notifications")
             }
             

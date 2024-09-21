@@ -9,10 +9,12 @@ import SwiftUI
 
 struct TaskHost: View {
     
-    @Environment(ModelData.self) var modelData
-    @State private var draftTask = Task.default
-    @State private var editMode: TaskEditMode = .none
+    @EnvironmentObject var modelData: ModelData
+    @State private var draftTask = TaskModel.default
+    @State var editMode: TaskEditMode = .none
     private let WIDTH: CGFloat = 280
+    
+    var isNewTask: Bool = false
     
     enum TaskEditMode {
         case none
@@ -50,7 +52,11 @@ struct TaskHost: View {
                     
                     Button("Done") {
                         withAnimation {
-                            modelData.task = draftTask
+                            if isNewTask {
+                                modelData.addTask(newTask: draftTask)
+                            } else {
+                                modelData.task = draftTask
+                            }
                             editMode = .none
                         }
                     }
@@ -72,14 +78,18 @@ struct TaskHost: View {
                         draftTask = modelData.task
                     }
                     .onDisappear {
-                        modelData.task = draftTask
+                        if !isNewTask {
+                            modelData.task = draftTask
+                        }
                         editMode = .none
                     }
             
             } else if editMode == .progressLogging {
                 TaskProgressLog(task: $draftTask)
                     .onDisappear {
-                        modelData.task = draftTask
+                        if !isNewTask {
+                            modelData.task = draftTask
+                        }
                         editMode = .none
                     }
             } else if editMode == .timeLogging {
@@ -124,6 +134,6 @@ struct TaskHost: View {
     
     #Preview {
         TaskHost()
-            .environment(ModelData())
+            .environmentObject(ModelData())
     }
 

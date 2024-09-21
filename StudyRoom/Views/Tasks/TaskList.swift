@@ -9,43 +9,50 @@ import SwiftUI
 
 struct TaskList: View {
     
-    @Environment(ModelData.self) var modelData
-    @State private var showInProgressOnly = false
-    
-    // filter for incomplete tasks
-    var filteredTasks: [Task] {
-        modelData.tasks.filter { task in
-            (!showInProgressOnly || !task.isFinished )
-        }
-    }
+    @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        NavigationSplitView {
-            List {
-                Toggle(isOn: $showInProgressOnly) {
-                    Text("In Progress")
-                }
-
-                ForEach(filteredTasks) { task in
-                    NavigationLink {
-                        TaskHost()
-                    } label: {
-                        TaskRow(task: modelData.task)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .init(horizontal: .leading, vertical: .center))
-                    }
+        
+        ZStack {
+            
+            if modelData.tasks.isEmpty {
+                EmptyTaskList()
+                
+            } else {
+                NavigationSplitView {
+                    List {
+                        ForEach(modelData.tasks) { task in
+                            NavigationLink {
+                                TaskHost()
+                            } label: {
+                                TaskRow(task: task)
+                                    .onTapGesture {
+                                        modelData.updateTask(task: task)
+                                    }
+                                }
+                            }
+                        .onDelete(perform: modelData.deleteTask)
+                        }
+                    .listStyle(.plain)
+                } detail: {
+                    Text("Select a task for details")
                 }
             }
-            .navigationTitle("Tasks")
-            .listStyle(.plain)
-        } detail: {
-            Text("List of Tasks")
+                
+
         }
+        .navigationBarItems(
+            leading: EditButton(),
+            trailing:
+                NavigationLink("Add Task", destination: TaskHost(editMode: .detailEditing, isNewTask: true))
+            )
     }
-    
-    
 }
 
+
 #Preview {
-    TaskList()
-        .environment(ModelData())
-}
+    NavigationView {
+                TaskList()
+            }
+            .environmentObject(ModelData())
+        }

@@ -7,23 +7,36 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 
-struct TaskModel: Identifiable {
+struct TaskModel: Identifiable, Codable {
     
-    let id = UUID()
+    let id: String
     var name: String
     var elapsedTime = 0.0
     var goalTime = 10.0
     var isFinished = false
-    var isDaily = true
     var icon = Icon.pencil
     var notifications = false
-    var color = Color(.blue)
+    var savedColor = CodableColor(cgColor: UIColor.systemBlue.cgColor)
     
-    static let `default` = TaskModel(name: "study")
+    var color: Color {
+            savedColor.color
+        }
     
+    init(id: String = UUID().uuidString, name: String, isFinished: Bool) {
+        self.id = id
+        self.name = name
+        self.isFinished = isFinished
+    }
     
-    enum Icon: String, CaseIterable, Identifiable {
+    static let `default` = TaskModel(
+            id: UUID().uuidString,
+            name: "Study",
+            isFinished: false
+        )
+    
+    enum Icon: String, CaseIterable, Identifiable, Codable {
         
         case books = "📚"
         case openBook = "📖"
@@ -34,15 +47,13 @@ struct TaskModel: Identifiable {
         var id: String {rawValue}
     }
     
-    mutating func checkFinished() {
-        if elapsedTime >= goalTime {
-            self.isFinished = true
-        }
-    }
-    
     mutating func doFinished() {
         self.elapsedTime = goalTime
         self.isFinished = true
+    }
+    
+    func updateFinished() -> TaskModel {
+        return TaskModel(id: id, name: name, isFinished: !isFinished)
     }
     
 }

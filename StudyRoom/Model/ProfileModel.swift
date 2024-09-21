@@ -4,13 +4,15 @@
 
 import Foundation
 
-struct Profile {
+struct ProfileModel: Identifiable {
+    
+    let id = UUID()
     var username: String
-    var prefersNotifications = false
+    var notifications = false
     var photo = Photo.dog
     var birthday = Date()
     
-    static let `default` = Profile(username: "max")
+    static let `default` = ProfileModel(username: "max")
     
     enum Photo: String, CaseIterable, Identifiable {
         case bear = "🐻"

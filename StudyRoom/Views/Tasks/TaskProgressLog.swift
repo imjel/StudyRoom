@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskProgressLog: View {
-    @Binding var task: Task
+    @Binding var task: TaskModel
     
     var values: ClosedRange<Double> {
         0...task.goalTime

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TaskEditor: View {
-    @Binding var task: Task
+    @Binding var task: TaskModel
+    
     
     var body: some View {
         
@@ -23,21 +24,54 @@ struct TaskEditor: View {
             }
             
             Picker("Icon", selection: $task.icon) {
-                ForEach(Task.Icon.allCases) { photo in
+                ForEach(TaskModel.Icon.allCases) { photo in
                     Text(photo.rawValue).tag(photo)
                 }
             }
+            
+            HStack {
+                Text("Elapsed Time")
+                    .foregroundStyle(.primary)
+                
+            }
+            
             HStack {
                 Text("Color")
                 Spacer()
-                ColorPicker(selection: $task.color, supportsOpacity: false){
-                }
+                ColorPicker(selection: Binding (
+                    get: {
+                        Color(cgColor: task.savedColor.cgColor)
+                    },
+                    set: { newColor in
+                        if let cgColor = newColor.cgColor {
+                            task.savedColor = CodableColor(cgColor: cgColor)
+                            }
+                        }), supportsOpacity: false
+                    ) { Text("") }
             }
             
             Toggle(isOn: $task.notifications) {
                 Text("Enable Notifications")
             }
             
+            VStack {
+                HStack {
+                    Text("Goal Time:")
+                    Spacer()
+                    Text("\(Int(task.goalTime)) min")
+                        .foregroundStyle(.blue)
+                        .multilineTextAlignment(.trailing)
+                }
+                
+                Slider(value: $task.goalTime, in: 1...120, step: 1) {
+                    Text("Goal Time")
+                } minimumValueLabel: {
+                    Text("1")
+                } maximumValueLabel: {
+                    Text("120")
+                }
+            
+            }
         }
     }
     
